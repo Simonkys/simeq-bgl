@@ -47,5 +47,5 @@ dependencies {
     implementation "androidx.appcompat:appcompat:$androidxAppCompatVersion"
     implementation "androidx.localbroadcastmanager:localbroadcastmanager:$androidxLocalbroadcastmanagerVersion"
     implementation "com.google.android.gms:play-services-location:$playServicesLocationVersion"
-    implementation 'com.squareup.okhttp3:okhttp:3.14.6'
+    implementation 'com.squareup.okhttp3:okhttp:4.9.1'
 }
