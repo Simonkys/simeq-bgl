@@ -1,0 +1,41 @@
+{
+  "name": "s-background-geolocation",
+  "version": "1.1.0",
+  "description": "Receive geolocation updates even while app is backgrounded.",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "license": "MIT",
+  "author": "James Diacono",
+  "types": "definitions.d.ts",
+  "files": [
+    "android/build.gradle",
+    "android/settings.gradle",
+    "android/proguard-rules.pro",
+    "android/gradle/wrapper/gradle-wrapper.properties",
+    "android/gradle.properties",
+    "ios/Plugin/Plugin.*",
+    "android/src/main/",
+    "ios/Podfile*",
+    "ios/Plugin/Info.plist",
+    "CapacitorCommunityBackgroundGeolocation.podspec",
+    "definitions.d.ts"
+  ],
+  "devDependencies": {
+    "@capacitor/android": "^3.1.1",
+    "@capacitor/core": "^3.1.1",
+    "@capacitor/ios": "^3.1.1"
+  },
+  "peerDependencies": {
+    "@capacitor/core": "^3.1.1"
+  },
+  "capacitor": {
+    "ios": {
+      "src": "ios"
+    },
+    "android": {
+      "src": "android"
+    }
+  }
+}
