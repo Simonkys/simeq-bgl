@@ -1,6 +1,6 @@
 {
   "name": "s-background-geolocation",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "Receive geolocation updates even while app is backgrounded.",
   "repository": {
     "type": "git",
