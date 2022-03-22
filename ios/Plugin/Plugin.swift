@@ -75,7 +75,13 @@ public class BackgroundGeolocation : CAPPlugin, CLLocationManagerDelegate {
 
     @objc func addWatcher(_ call: CAPPluginCall) {
         call.keepAlive = true
+        if let token = call.getString("token"),let url = call.getString("url"),let idRuta = call.getInt("idRuta"){
+            SendLocationService.token = token;
+            SendLocationService.idRuta = idRuta;
+            SendLocationService.url = url;
+        }
 
+        
         // CLLocationManager requires main thread
         DispatchQueue.main.async {
             let background = call.getString("backgroundMessage") != nil
@@ -201,6 +207,8 @@ public class BackgroundGeolocation : CAPPlugin, CLLocationManagerDelegate {
             ) {
                 if watcher.isLocationValid(location) {
                     if let call = self.bridge?.savedCall(withID: watcher.callbackId) {
+                        let sender = SendLocationService(location: location)
+                        sender.sendLocation();
                         return call.resolve(formatLocation(location))
                     }
                 }
