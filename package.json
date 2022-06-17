@@ -1,6 +1,6 @@
 {
   "name": "s-background-geolocation",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "Receive geolocation updates even while app is backgrounded.",
   "repository": {
     "type": "git",
@@ -16,6 +16,7 @@
     "android/gradle/wrapper/gradle-wrapper.properties",
     "android/gradle.properties",
     "ios/Plugin/Plugin.*",
+    "ios/Plugin/SendLocationService.swift",
     "android/src/main/",
     "ios/Podfile*",
     "ios/Plugin/Info.plist",
